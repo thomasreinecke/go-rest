@@ -10,12 +10,11 @@ REST service bound to `::5000` thats providing a menu of sushi rolls on `http://
 
 ### Installation
 ```
-go get ./...
+git clone https://github.com/thomasreinecke/go-rest.git
 go run cmd/sushibar/sushibar.go 
 ```
 
-
-exposes the following REST interface:
+the **sushibar** service exposes the following REST interface:
 * GET `/sushi` : returns full list of all sushi rolls on the menu
 * GET `/sushi/{id}` returns a specific roll from the menu
 * POST `/sushi` adds a roll to the sushi menue (structure is `{"name":"my roll","ingredients":"good stuff"}`
