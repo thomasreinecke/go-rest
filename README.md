@@ -15,7 +15,7 @@ go run cmd/sushibar/sushibar.go
 ```
 
 the **sushibar** service exposes the following REST interface:
-* GET `/sushi` : returns full list of all sushi rolls on the menu
+* GET `/sushi` returns full list of all sushi rolls on the menu
 * GET `/sushi/{id}` returns a specific roll from the menu
 * POST `/sushi` adds a roll to the sushi menue (structure is `{"name":"my roll","ingredients":"good stuff"}`
 * POST `/sushi/{id}` updates an existing sushi roll on the given id or throws a HTTP:403 if the id is not known
