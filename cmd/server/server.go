@@ -5,12 +5,13 @@ import (
 	"fmt"
 	"time"
 
+	"net/http"
+
+	"github.com/labstack/echo"
 	"github.com/thomasreinecke/go-rest/internal/user"
 )
 
 func main() {
-	fmt.Println("Hello, world.")
-	//fmt.Println(stringutil.Reverse("!oG ,olleH"))
 
 	nu := user.NewUser{
 		Name:     "Thomas Reinecke",
@@ -28,4 +29,9 @@ func main() {
 	} else {
 		fmt.Println(u)
 	}
+}
+
+// Handler
+func hello(c echo.Context) error {
+	return c.String(http.StatusOK, "Hello, World!")
 }
