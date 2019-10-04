@@ -8,6 +8,13 @@ my very first go project, trying to learn the language, packaging structures and
 ## cmd/sushibar
 REST service bound to `::5000` thats providing a menu of sushi rolls on `http://localhost:5000/sushi`
 
+### Installation
+```
+go get ./...
+go run cmd/sushibar/sushibar.go 
+```
+
+
 exposes the following REST interface:
 * GET `/sushi` : returns full list of all sushi rolls on the menu
 * GET `/sushi/{id}` returns a specific roll from the menu
